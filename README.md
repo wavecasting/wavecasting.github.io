@@ -5,20 +5,21 @@ Built on the [Nerfies](https://github.com/nerfies/nerfies.github.io) template.
 
 ## Deploying
 
-This is a plain static site — no build step.
+Deployed at <https://wavecasting.github.io/>. This is a plain static site — no
+build step.
 
-1. Create the repository `<name>.github.io` under the account or organization
-   named `<name>`, and push this directory to its default branch.
+1. Create the repository `wavecasting.github.io` under the `wavecasting`
+   account and push this directory to `main`.
 2. Settings → Pages → Source: *Deploy from a branch*, branch `main`, folder `/ (root)`.
 
 `.nojekyll` is present so Pages serves the files as-is instead of running them
 through Jekyll.
 
-## Before the first deploy
+## Things to watch
 
-- **`og:image` in `index.html`** is an absolute URL and still points at
-  `rongduo.github.io`. Open Graph does not accept relative paths, so this has to
-  be updated by hand once the final domain is known.
+- **`og:image` and `og:url` in `index.html`** are absolute URLs pinned to
+  `wavecasting.github.io`. Open Graph does not accept relative paths, so they
+  have to be edited by hand if the domain ever changes.
 - **`index.css?v=4`** — the query string is a cache-buster. Bump it whenever
   `static/css/index.css` changes, otherwise browsers and the Pages CDN may keep
   serving the old stylesheet.
